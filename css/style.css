@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    background: url('../images/Monkees_bw_Dark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /*display: flex;*/
+    /*align-items: center;*/
+    justify-content: center;
+    /*position: relative;*/
+}
+
+.logo{
+    width:300px;
+} 
