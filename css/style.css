@@ -1,13 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,');
+@import url("https://use.typekit.net/oyc4fms.css");
+
+
 body {
-    height: 100vh;
-    background: url('../images/Monkees_bw_Dark.jpg') no-repeat center center fixed;
-    background-size: cover;
-    /*display: flex;*/
-    /*align-items: center;*/
-    justify-content: center;
-    /*position: relative;*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
 }
 
-.logo{
-    width:300px;
-} 
+p {font-weight: 300;
+    font-size:18px;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+
+.section {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-background {
+    height: 80vh;
+    background: url('../images/Monkees_bw_Dark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+/*Header*/
+
+.logo {
+    width: 300px;
+}
+
+.navbar {
+    background-color: rgb(5, 5, 5);
+    color: white;
+    padding-right: 30px;
+    padding-bottom:10px;
+    border-radius:0;
+    margin-bottom: 0px;
+    border:0;
+    text-align: center;
+    
+}
+
+.navbar-nav{
+    float:none;
+    opacity:.9;
+   
+}
+
+/*.navbar a {*/
+/*    width:100%;*/
+/*    height:100%;*/
+/*}*/
+ 
+.li{
+    padding:20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ul {
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+    padding: 30px;
+    text-decoration:none;
+}
+
+/*History*/
+
+.pictureframe {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 33%;
+}
+
+.title {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    font-family: 'sheepman', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px
+
+}
+
+.history {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    opacity: .9;
+    margin: 0;
+    min-height: 700px;
+}
+
+.history h2 {
+    margin-bottom: 20px;
+}
+
+.history p{
+    margin-left: 30px;
+}
+
+.ttable {
+    background: url('../images/monkees_chairs.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+section div div p {
+    text-align: justify;
+}
+
+.the-band {
+    padding: 0;
+}
+
+.member-wrap{
+    padding: 30px;
+}
+
+.band-member {
+    padding: 0px 30px 10px 30px;
+}
+
+img {
+    margin-bottom: 30px;
+}
+
+.band-member-paragraph {
+    color: black;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/*player Styles*/
+
+.listen {
+    background-color: #FFDA00;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.listen p{
+    margin-left: 28px;
+}
+
+.listen-wrap{
+    padding: 15px;
+}
+
+#plList {
+    padding: 0 20px;
+}
+
+.plyr {
+    position: relative;
+    height: auto;
+    margin: auto;
+}
+
+.plyr__progress--played, .plyr__volume--display {
+    color: #ff7a00;
+    background: #944f00;
+
+}
+
+.plyr__progress--played,
+.plyr__volume--display {
+    color: #ff7a00;
+    background: #944f00;
+}
+
+/*For Hire*/
+
+.for-hire {
+    background: url('../images/ForHire.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color:white;
+    min-height: 700px;
+}
+
+.plyr audio, .plyr video {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: inherit;
+}
+
+
+/*footer*/
+
+.social-links{
+    margin:30px;
+}
+
+.social-links li a i {
+    height: 40px;
+    width: 40px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    background-color: #CE1141;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background-color: #e84610;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.footer-logo{
+    width:150px;
+}
+
+.footer-wrap{
+    margin:auto;
+    text-align: center;
+}
+
