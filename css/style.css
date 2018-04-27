@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,');
-
-
+ @import url("https://use.typekit.net/nvu8vwb.css");
 
 body {
     padding: 0;
@@ -32,6 +31,7 @@ p {font-weight: 300;
 .logo-background {
     height: 80vh;
     background: url('../images/Monkees_bw_Dark.jpg') no-repeat center center fixed;
+    background-attachment: scroll;
     background-size: cover;
     display: flex;
     align-items: center;
