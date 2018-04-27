@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>The Monkees!</title>
 </head>
+
 <body class="container-fluid">
     <div class="container-fluid logo-background">
         <a href="index.html">
@@ -142,13 +143,23 @@
             </div>
         </article>
     </section>
-
     <section class="container-fluid for-hire" id="hire">
         <h2 class="title">Hey, Hey! Hire The Monkees!</h2>
-        <h3>The Monkees are now avaiable For hire to play at <strong>YOUR</strong> special day.</h3>
-        <h3>Click On the link below to learn more!</h3>
+        <div class="hire-text-wrap">
+                <h3 class="col-xs-12">The Monkees are now avaiable for hire to play at <strong>YOUR</strong> special day.</h3>
+                <p>Fill in the form below for more details..</p>
+            <div class="center-form row">
+                <form class="form">
+                    <input type="text" name="name" class="form-control" id="Fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="Fullname" placeholder="Email" required/>
+                    <p>Date of event.</p>
+                    <input type="date" name="date" class="form-control" id="Fullname" placeholder="Date of the event" required/>
+                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Tell us a bit about your event."></textarea>
+                    <button type="submit" value="Submit" class="btn btn-primary center-block" />SEND</button>
+                </form>
+            </div>
+        </div>
     </section>
-
     <footer class="container-fluid">
         <div class="row">
             <div class="col-xs-12 footer-wrap">
@@ -304,4 +315,5 @@
         }
     </script>
 </body>
+
 </html>

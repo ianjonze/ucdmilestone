@@ -1,12 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,');
- @import url("https://use.typekit.net/nvu8vwb.css");
+@import url("https://use.typekit.net/nvu8vwb.css");
 
 body {
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 p {font-weight: 300;
@@ -31,7 +31,6 @@ p {font-weight: 300;
 .logo-background {
     height: 80vh;
     background: url('../images/Monkees_bw_Dark.jpg') no-repeat center center fixed;
-    background-attachment: scroll;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -40,6 +39,19 @@ p {font-weight: 300;
     margin: 0;
 }
 
+@media (min-width:320px) {
+    
+    .for-hire {
+            background-attachment: scroll;
+    }
+    .ttable {
+            background-attachment: scroll;
+    }
+    .logo-background {
+            background-attachment: scroll;
+    }
+}
+ 
 /*Header*/
 
 .logo {
@@ -50,18 +62,15 @@ p {font-weight: 300;
     background-color: rgb(5, 5, 5);
     color: white;
     padding-right: 30px;
-    padding-bottom:10px;
     border-radius:0;
     margin-bottom: 0px;
     border:0;
     text-align: center;
-    
 }
 
 .navbar-nav{
     float:none;
     opacity:.9;
-    -khtml-opacity: 0.5;
    
 }
 
@@ -115,7 +124,6 @@ p {font-weight: 300;
     font-style: normal;
     font-weight: 300;
     font-size: 56px
-
 }
 
 .history {
@@ -123,13 +131,13 @@ p {font-weight: 300;
     color: white;
     padding: 50px;
     opacity: .9;
-    -khtml-opacity: 0.9;
     margin: 0;
     min-height: 700px;
 }
 
 .history h2 {
     margin-bottom: 20px;
+    color:#FFDA00;
 }
 
 .history p{
@@ -145,6 +153,9 @@ section div div p {
     text-align: justify;
 }
 
+
+/*the band */
+ 
 .the-band {
     padding: 0;
 }
@@ -155,6 +166,10 @@ section div div p {
 
 .band-member {
     padding: 0px 30px 10px 30px;
+}
+
+.band-header .title{
+    color:#ce1141;
 }
 
 img {
@@ -199,20 +214,15 @@ h3 {
     margin: auto;
 }
 
-
 .plyr__progress--played,
 .plyr__volume--display {
     color: #ff7a00;
     background: #944f00;
 }
 
-/*For Hire*/
-
-.for-hire {
-    background: url('../images/ForHire.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color:white;
-    min-height: 700px;
+video {
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 .plyr audio, .plyr video {
@@ -222,12 +232,65 @@ h3 {
     border-radius: inherit;
 }
 
-video
- {
-    max-width: 100%;
-    vertical-align: middle;
+/*For Hire*/
+
+.for-hire {
+    background: url('../images/ForHire.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment:scroll;
+    color:white;
+    min-height: 700px;
+    text-align: left;
 }
 
+.for-hire .title{
+    color: #ce1141;
+}
+
+.form-control{
+    margin-bottom:20px;
+    max-width:50%;
+    margin: 0px auto  20px auto;
+}
+
+.form p {
+    margin: auto 
+}
+
+@media (max-width:320px){
+    .form-control{
+        max-width:70%;
+    }
+}
+
+.hire-text-wrap{
+    padding:20px;
+    text-align: center;
+}
+.hire-text-wrap p{
+    margin: 0px auto  20px auto;
+}
+
+.form button{
+    background-color: #FFDA00;
+    color:black;
+    border:none;
+    height:50px;
+    width:50%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration:.2s;
+     -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition:opacity color 0.2s ease-in-out;
+}
+
+.form button:hover{
+    background-color: #ffb506;
+}
 
 /*footer*/
 
