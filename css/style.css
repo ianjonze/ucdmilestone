@@ -38,18 +38,13 @@ p {font-weight: 300;
     margin: 0;
 }
 
-@media (min-width:320px) {
-    
-    .for-hire {
-            background-attachment: scroll;
-    }
-    .ttable {
-            background-attachment: scroll;
-    }
+@media (max-width:768px) {
     .logo-background {
             background-attachment: scroll;
     }
 }
+
+
  
 /*Header*/
 
@@ -70,8 +65,8 @@ p {font-weight: 300;
     padding-right: 30px;
     border-radius:0;
     margin-bottom: 0px;
-    border:0;
     text-align: center;
+    border:0px;
 }
 
 .navbar-nav{
@@ -124,7 +119,7 @@ p {font-weight: 300;
 
 .title {
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 15px;
     margin-bottom: 30px;
     font-family: sheepman, serif;
     font-style: normal;
@@ -136,7 +131,7 @@ p {font-weight: 300;
     background-color: black;
     color: white;
     padding: 50px;
-    opacity: .9;
+    opacity: .85;
     margin: 0;
     min-height: 700px;
 }
@@ -153,6 +148,12 @@ p {font-weight: 300;
 .ttable {
     background: url('../images/monkees_chairs.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+@media (max-width:768px) {
+    .ttable {
+        background-attachment: scroll;
+    }
 }
 
 section div div p {
@@ -178,19 +179,28 @@ section div div p {
     color:#ce1141;
 }
 
-img {
+.band-member img {
     margin-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 43px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 43px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 43px 0px rgba(0,0,0,0.16);
+    padding:0;
 }
 
 .band-member-paragraph {
     color: black;
     text-align: justify;
     margin-bottom: 30px;
+    padding:0;
 }
 
 h3 {
     margin-bottom: 30px;
     font-size: 28px;
+}
+
+.col-sm-12{
+    padding:0;
 }
 
 /*player Styles*/
@@ -248,10 +258,16 @@ video {
 .for-hire {
     background: url('../images/ForHire.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment:scroll;
     color:white;
     min-height: 700px;
     text-align: left;
+    padding: 30px;
+}
+
+@media (max-width:768px) {
+    .for-hire {
+            background-attachment: scroll;
+    }
 }
 
 .for-hire .title{
@@ -288,7 +304,7 @@ video {
     color:black;
     border:none;
     height:50px;
-    width:15%;
+    width:20%;
     font-size: 18px;
     font-weight: 400;
     margin-top: 100px;
@@ -303,6 +319,7 @@ video {
 
 .form button:hover{
     background-color: #ffb506;
+    color: black;
 }
 
 /*footer*/
@@ -371,4 +388,3 @@ video {
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
-
