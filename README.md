@@ -16,3 +16,5 @@
 #####  - jQuery
 #####  - A snippet of code from previous module for Social media Icons.
 #####  - Monkees Logo vector, and Images from various sources. 
+#####  - Sheepman Font for titles part of Adobe Typkit
+#####  - Oswald font for everything else is Oswald
