@@ -21,7 +21,6 @@ p {font-weight: 300;
     margin: 0;
 }
 
-
 .section {
     margin: 0;
     padding: 0;
@@ -44,8 +43,6 @@ p {font-weight: 300;
     }
 }
 
-
- 
 /*Header*/
 
 .logo {
@@ -66,7 +63,7 @@ p {font-weight: 300;
     border-radius:0;
     margin-bottom: 0px;
     text-align: center;
-    border:0px;
+    border:0px; 
 }
 
 .navbar-nav{
@@ -304,7 +301,7 @@ video {
     color:black;
     border:none;
     height:50px;
-    width:20%;
+    min-width:20%;
     font-size: 18px;
     font-weight: 400;
     margin-top: 100px;
