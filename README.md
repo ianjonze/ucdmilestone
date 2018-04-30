@@ -17,4 +17,5 @@
 #####  - A snippet of code from previous module for Social media Icons.
 #####  - Monkees Logo vector, and Images from various sources. 
 #####  - Sheepman Font for titles part of Adobe Typkit
-#####  - Oswald font for everything else is Oswald
+#####  - Oswald font for everything else.
+#####  - added scroll to dic id, using snippet from http://jsfiddle.net/thepeanut/ohhffte6/

@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>The Monkees!</title>
 </head>
+
 <body class="container-fluid">
     <div class="container-fluid logo-background">
-           <img Class="logo" src="images/logo.png" alt="The Monkees Logo">
+        <img Class="logo" src="images/logo.png" alt="The Monkees Logo">
     </div>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -27,10 +28,10 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav row">
-                    <li class="col-xs-12 col-sm-3 li"><a href="#history">HISTORY</a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#meet">MEET THE MONKEES</a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#listen">WATCH & LISTEN</a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#hire">MONKEES FOR HIRE!</a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#history"><history type="button">HISTORY</history></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#meet"><meet type="button">MEET THE MONKEES</meet></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#listen"><listen type="button">WATCH & LISTEN</listen></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#hire"><hire type="button">MONKEES FOR HIRE!</hire></a></li>
                 </ul>
             </div>
         </div>
@@ -143,8 +144,8 @@
     <section class="container-fluid for-hire" id="hire">
         <h2 class="title">Hey, Hey! Hire The Monkees!</h2>
         <div class="hire-text-wrap">
-                <h3 class="col-xs-12">The Monkees are now available for hire to play at <strong>YOUR</strong> special day.</h3>
-                <p>Fill in the form below for more details..</p>
+            <h3 class="col-xs-12">The Monkees are now available for hire to play at <strong>YOUR</strong> special day.</h3>
+            <p>Fill in the form below for more details..</p>
             <div class="center-form row">
                 <form class="form">
                     <input type="text" name="name" class="form-control" id="Fullname" placeholder="Name" required/>
@@ -172,8 +173,6 @@
     </footer>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-caret-up"></button>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.plyr.io/2.0.18/plyr.js"></script>
@@ -296,7 +295,7 @@
         window.onscroll = function() { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
                 document.getElementById("myBtn").style.opacity = "0.7";
             }
             else {
@@ -309,6 +308,32 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera 
         }
+
+        $("history").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#history").offset().top
+                },
+                'slow');
+        });
+        $("meet").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#meet").offset().top
+                },
+                'slow');
+        });
+        $("listen").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#listen").offset().top
+                },
+                'slow');
+        });
+        $("hire").click(function() {
+            $('html,body').animate({
+                    scrollTop: $("#hire").offset().top
+                },
+                'slow');
+        });
+        
     </script>
 </body>
 
