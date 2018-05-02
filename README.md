@@ -18,4 +18,4 @@
 #####  - Monkees Logo vector, and Images from various sources. 
 #####  - Sheepman Font for titles part of Adobe Typkit
 #####  - Oswald font for everything else.
-#####  - added scroll to dic id, using snippet from http://jsfiddle.net/thepeanut/ohhffte6/
+#####  - added scroll to div id, using snippet from http://jsfiddle.net/thepeanut/ohhffte6/

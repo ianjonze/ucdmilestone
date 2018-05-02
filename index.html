@@ -19,19 +19,19 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span type="span" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>      
-                    <span class="icon-bar"></span>  
-                </button>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </span>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav row">
-                    <li class="col-xs-12 col-sm-3 li"><a href="#history"><history type="button">HISTORY</history></a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#meet"><meet type="button">MEET THE MONKEES</meet></a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#listen"><listen type="button">WATCH & LISTEN</listen></a></li>
-                    <li class="col-xs-12 col-sm-3 li"><a href="#hire"><hire type="button">MONKEES FOR HIRE!</hire></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#history"><span class="historyBut" type="span">HISTORY</span></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#meet"><span class="meetBut"  type="span">MEET THE MONKEES</span></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#listen"><span class="listenBut"  type="span">WATCH & LISTEN</span></a></li>
+                    <li class="col-xs-12 col-sm-3 li"><a href="#hire"><span class="hireBut" type="span" >MONKEES FOR HIRE!</span></a></li>
                 </ul>
             </div>
         </div>
@@ -152,7 +152,7 @@
                     <input type="text" name="emailaddress" class="form-control" id="Fullname" placeholder="Email" required/>
                     <input type="date" name="date" class="form-control" id="Fullname" placeholder="Date of the event" required/>
                     <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Tell us a bit about your event."></textarea>
-                    <button type="submit" value="Submit" class="btn btn-primary center-block" />SEND</button>
+                    <button type="submit" value="Submit" class="btn btn-primary center-block">SEND</button>
                 </form>
             </div>
         </div>
@@ -167,174 +167,14 @@
                     <li><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
                 </ul>
                 <img class="footer-logo" src="images/monkee_footer_logo.png">
-                <p>Copywrite © 2018. The Monkees</p>
+                <p>Copyrite © 2018. The Monkees</p>
             </div>
         </div>
     </footer>
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-caret-up"></button>
+    <span id="myBtn" title="Go to top" class="fa fa-caret-up"></span>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.plyr.io/2.0.18/plyr.js"></script>
-    <script>
-        jQuery(function($) {
-            'use strict';
-            var supportsAudio = !!document.createElement('audio').canPlayType;
-            if (supportsAudio) {
-                var index = 0,
-                    playing = false,
-                    mediaPath = 'audio/',
-                    extension = '',
-                    tracks = [{
-                        "track": 1,
-                        "name": "Clarksville",
-                        "duration": "2:46",
-                        "file": "Clarksville"
-                    }, {
-                        "track": 2,
-                        "name": "Daydream Believer",
-                        "duration": "2:42",
-                        "file": "DaydreamBeliever"
-                    }, {
-                        "track": 3,
-                        "name": "I'm a Believer",
-                        "duration": "2:35",
-                        "file": "ImABeliever"
-                    }, {
-                        "track": 4,
-                        "name": "Stepping Stone",
-                        "duration": "2:22",
-                        "file": "SteppingStone"
-                    }],
-                    buildPlaylist = $(tracks).each(function(key, value) {
-                        var trackNumber = value.track,
-                            trackName = value.name,
-                            trackDuration = value.duration;
-                        if (trackNumber.toString().length === 1) {
-                            trackNumber = '0' + trackNumber;
-                        }
-                        $('#plList').append('<li><div class="plItem"><span class="plNum">' + trackNumber + '.</span><span class="plTitle">' + trackName + '</span><span class="plLength">' + trackDuration + '</span></div></li>');
-                    }),
-                    trackCount = tracks.length,
-                    npAction = $('#npAction'),
-                    npTitle = $('#npTitle'),
-                    audio = $('#audio1').on('play', function() {
-                        playing = true;
-                        npAction.text('Now Playing...');
-                    }).on('pause', function() {
-                        playing = false;
-                        npAction.text('Paused...');
-                    }).on('ended', function() {
-                        npAction.text('Paused...');
-                        if ((index + 1) < trackCount) {
-                            index++;
-                            loadTrack(index);
-                            audio.play();
-                        }
-                        else {
-                            audio.pause();
-                            index = 0;
-                            loadTrack(index);
-                        }
-                    }).get(0),
-                    btnPrev = $('#btnPrev').on('click', function() {
-                        if ((index - 1) > -1) {
-                            index--;
-                            loadTrack(index);
-                            if (playing) {
-                                audio.play();
-                            }
-                        }
-                        else {
-                            audio.pause();
-                            index = 0;
-                            loadTrack(index);
-                        }
-                    }),
-                    btnNext = $('#btnNext').on('click', function() {
-                        if ((index + 1) < trackCount) {
-                            index++;
-                            loadTrack(index);
-                            if (playing) {
-                                audio.play();
-                            }
-                        }
-                        else {
-                            audio.pause();
-                            index = 0;
-                            loadTrack(index);
-                        }
-                    }),
-                    li = $('#plList li').on('click', function() {
-                        var id = parseInt($(this).index());
-                        if (id !== index) {
-                            playTrack(id);
-                        }
-                    }),
-                    loadTrack = function(id) {
-                        $('.plSel').removeClass('plSel');
-                        $('#plList li:eq(' + id + ')').addClass('plSel');
-                        npTitle.text(tracks[id].name);
-                        index = id;
-                        audio.src = mediaPath + tracks[id].file + extension;
-                    },
-                    playTrack = function(id) {
-                        loadTrack(id);
-                        audio.play();
-                    };
-                extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
-                loadTrack(index);
-            }
-        });
-
-        // initialize plyr
-        plyr.setup($('#audio1'), {});
-
-        // Scroll to top
-
-        window.onscroll = function() { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-                document.getElementById("myBtn").style.opacity = "0.7";
-            }
-            else {
-                document.getElementById("myBtn").style.opacity = "0";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera 
-        }
-
-        $("history").click(function() {
-            $('html,body').animate({
-                    scrollTop: $("#history").offset().top
-                },
-                'slow');
-        });
-        $("meet").click(function() {
-            $('html,body').animate({
-                    scrollTop: $("#meet").offset().top
-                },
-                'slow');
-        });
-        $("listen").click(function() {
-            $('html,body').animate({
-                    scrollTop: $("#listen").offset().top
-                },
-                'slow');
-        });
-        $("hire").click(function() {
-            $('html,body').animate({
-                    scrollTop: $("#hire").offset().top
-                },
-                'slow');
-        });
-        
-    </script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
